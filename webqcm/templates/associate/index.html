@@ -1,0 +1,9 @@
+{% if Copie_list %}
+    <ul>
+    {% for copie in Copie_list %}
+        <li><a href="/associate/{{ copie.id }}/">{{ copie.num }}</a><img src="{{ copie.image_nom.url }}"/> </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No copies are available.</p>
+{% endif %}

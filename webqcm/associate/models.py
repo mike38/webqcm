@@ -9,7 +9,7 @@ class Etudiant(models.Model):
 
 class Copie(models.Model):
 	num = models.IntegerField()
-	image_nom = models.FilePathField(path="/home/mike/django/images")	
+	image_nom = models.ImageField(upload_to="images")	
 
 class Associate(models.Model):
 	copie = models.ForeignKey(Copie)
